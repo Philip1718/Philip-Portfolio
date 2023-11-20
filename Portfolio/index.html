@@ -216,12 +216,14 @@
             </div>
             <div class="details-containers color-container">
                 <div class="article-container">
-                    <img src="./assets/coffeshop.jpeg" alt="Project 1" class="project-img">
+                    <img src="./assets/coffeshop.jpeg" alt="Project 2" class="project-img">
                 </div>
                 <h2 class="experience-sub-title project-title">Coffee Shop</h2>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Philip1718/Philip-Portfolio/tree/b31c5d381b5b7a80aa5f4359e8f1d84390e13a0f/coffee-shop'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                    <button class="btn btn-color-2 project-btn" onclick="showPicture()">Show Picture</button>
+                    <div id="imageContainer"></div>
+                    <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
                     
 
                     </button>
@@ -229,12 +231,12 @@
             </div>
             <div class="details-containers color-container">
                 <div class="article-container">
-                    <img src="./assets/walle_read.jpeg" alt="Project 1" class="project-img">
+                    <img src="./assets/walle_read.jpeg" alt="Project 3" class="project-img">
                 </div>
                 <h2 class="experience-sub-title project-title">CTU Buddy</h2>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Philip1718/Philip-Portfolio/tree/2b15ea6683e83ed5bb2df1637e605f9546db8ff7/Ctu%20Buddy'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://shadowctubuddy.000webhostapp.com'">Live Demo</button>
                     
 
                     </button>
@@ -242,7 +244,7 @@
             </div>
         </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
     </section>
     <section id="contact">
         <p class="section__text_p1">Get in Touch</p>
@@ -273,6 +275,24 @@
         <p>Copyright &#169; 2023 Philip Potgieter. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        function showPicture() {
+            // Get the image container element
+            var imageContainer = document.getElementById('imageContainer');
+            
+            // Create an img element
+            var imgElement = document.createElement('img');
+            
+            // Set the source (replace 'path/to/your/image.jpg' with the actual path to your image)
+            imgElement.src = 'path/to/your/image.jpg';
+            
+            // Set any additional attributes if needed (e.g., alt text)
+            imgElement.alt = 'Description of the image';
+        
+            // Append the img element to the image container
+            imageContainer.appendChild(imgElement);
+        }
+        </script>
     
 </body>
 </html>
