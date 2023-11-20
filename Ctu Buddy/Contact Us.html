@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="icon" href="images/wall-e.png">
+    <link rel="stylesheet" href="Contact Us_style.css">
+    <script src="https://kit.fontawesome.com/edbade1029.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+          <div class="logo">
+            <a href="Home.html"><img width="12%" src="images/wall-e.png" alt=""></a>
+              <span>CTU-Buddy</span>
+          </div>
+          <ul>
+              <li><a href="Home.html">Home</a></li>
+              <!-- <li><a href="Timetable.html">Timetable  </a></li>
+              <li><a href="Discussion.html">Discussion</a></li> -->
+              <!-- <li><a href="Share Resources.html">Share Resources</a></li> -->
+              <li><a href="About Us.html">About us</a></li>
+              <!-- <li><a href="Contact Us.html">Contact us</a></li> -->
+              <li><a href="Profile.html"><img class="userpro" src="images/usericon.png" alt=""></a></li>
+          </ul>
+        </nav>
+        
+        <div class="headerF">
+          <img class="ctu-location" src="images/ctu_locations.jpg" alt=""> 
+    
+           <form action="style1.php" method="POST">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name"><i class="fa-solid fa-user"></i> Your Name </label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        <label for="phone"><i class="fa-solid fa-phone"></i> Phone No. </label>
+                    </div>   
+                </div>
+    
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email </label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                    <label for="message"><i class="fa-solid fa-comments"></i> Your Message</label>
+                </div>
+                <button id="submit" type="submit">SUBMIT <i class="fa-regular fa-paper-plane"></i></button>
+                <button id="subscribe" type="button" onclick="window.location.href='subscribe.html'">Subscribe</button>
+            </form>
+        </div>
+        
+        <div class="sidebar">
+            <header>Shadows</header>
+            <ul>
+                <li><i>Sebastian van Zyl | 20230301</i></li>
+                <li><i>Tayla Potgieter   | 20231256</i></li>
+                <li><i>Philip Potgieter  | 20231860</i></li>
+            </ul>
+        </div>
+        <footer>
+            <p id="custom">Copyright <img class="copyright" src="images/copyright-regular.svg" width="10" height="10"> 2023 Shadows</p>
+            </footer>
+
+    </div>
+
+
+</body>
+</html>

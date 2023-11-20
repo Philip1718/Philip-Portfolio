@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="icon" href="images/wall-e.png">
+    <link rel="stylesheet" href="Calendar_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylebuddy.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+          <div class="logo">
+            <a href="Home.html"><img width="12%" src="images/wall-e.png" alt=""></a>
+              <span class="logo-text">CTU-Buddy</span>
+          </div>
+          <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Timetable.html">Timetable  </a></li>
+              <li><a href="Discussion.html">Discussion</a></li>
+              <li><a href="Share Resources.html">Share Resources</a></li>
+              <li><a href="Profile.html"><img class="userpro" src="images/usericon.png" alt=""></a></li>
+              <!-- <li><a href="About Us.html">About us</a></li>
+              <li><a href="Contact Us.html">Contact us</a></li> -->
+          </ul>
+        </nav>
+        <div class="hero">
+          <div id="calendar"></div>
+
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+      <script src="evo-calendar.min.js"></script>
+      <script>
+          $(document).ready(function() {
+            $('#calendar').evoCalendar({
+
+           
+              theme:"midnight-blue",
+              calendarEvents: [{
+                      id: 'bHay68s', // Event's ID (required)
+                      name: "New Year", // Event name (required)
+                      date: ["2023-01-1" ],// Event date (required)
+                       type: "holiday", // Event type (required)
+                       description:"New year", // Event description (required)
+                      everyYear: true // Same event every year (optional)
+    },
+    {
+                      name: "Exam Week",
+                      badge: "10/ 28- 11/15", // Event badge (optional)
+                      date: ["2023-10-29","2023-11-3" ], // Date range
+                      description: "Sumative Exams", // Event description (optional)
+                      type: "event",
+                      color: "#63d867" // Event custom color (optional) 
+
+    },
+    {                 name: "Vaction Week",
+                      badge: "09/11- 09/15", // Event badge (optional)
+                      date: ["2023-09-10","2023-09-15" ], // Date range
+                      description: "Enjoy your vaction ", // Event description (optional)
+                      type: "event",
+                      color: "#63d867" // Event custom color (optional)
+                  
+                  }
+
+
+                    
+  ]
+});
+               
+            })
+          
+          
+    
+      </script> 
+      <footer>
+        <p id="custom">Copyright <img class="copyright" src="images/copyright-regular.svg" width="10" height="10"> 2023 Shadows</p>
+        </footer>
+    
+
+</body>
+
+</html>

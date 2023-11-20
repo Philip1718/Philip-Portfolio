@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Resources</title>
+    <link rel="icon" href="images/wall-e.png">
+    <link rel="stylesheet" href="Share Resources_style.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+          <div class="logo">
+            <a href="Home.html"><img width="12%" src="images/wall-e.png" alt=""></a>
+              <span>CTU-Buddy</span>
+          </div>
+          <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Timetable.html">Timetable  </a></li>
+              <li><a href="Calendar.html">Calendar</a></li>
+              <li><a href="Discussion.html">Discussion</a></li>
+              <!-- <li><a href="Share Resources.html">Share Resources</a></li> -->
+              <!-- <li><a href="About Us.html">About us</a></li>
+              <li><a href="Contact Us.html">Contact us</a></li> -->
+              <li><a href="Profile.html"><img class="userpro" src="images/usericon.png" alt=""></a></li>
+          </ul>
+        </nav>
+        
+        <div class="container">
+          <h1>Share Resources</h1>
+          
+          <div class="upload-form">
+            <h2>Upload Resource</h2>
+            <hr class="hr-mod">
+            <form id="uploadForm">
+              <input type="text" id="resourceName" placeholder="Resource Name" required>
+              <input class="button-upload"  type="file" id="resourceFile" accept=".pdf" required>
+              <select id="resourceCategory" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Robotic Development">RD412</option>
+                <option value="Core Web Development">CW412</option>
+                <option value="Ethics and Networking">EN412</option>
+                <option value="Cloud Fundamentals">CF412</option>
+              </select>
+              <input type="text" id="resourceTags" placeholder="Tags (comma-separated)">
+              <button type="submit">Upload</button>
+            </form>
+          </div>
+          
+          <div class="resource-list">
+            <h2>Resources</h2>
+            <hr class="hr-mod2">
+            <input type="text" id="searchInput" placeholder="Search resources...">
+            <ul id="resourceItems"></ul>
+            <div id="noResultsMsg"></div>
+          </div>
+        </div>
+      
+        <script src="Share Resources.js"></script>
+        
+      </div>
+    
+
+</body>
+
+<footer>
+  <footer>
+    <p id="custom">Copyright <img class="copyright" src="images/copyright-regular.svg" width="10" height="10"> 2023 Shadows</p>
+    </footer>
+    
+</html>

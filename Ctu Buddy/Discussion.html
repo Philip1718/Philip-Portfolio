@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link rel="icon" href="images/wall-e.png">
+    <link rel="stylesheet" href="Discussion_style.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">
+                <a href="Home.html"><img width="12%" src="images/wall-e.png" alt=""></a>
+                <span>CTU-Buddy</span>
+            </div>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Timetable.html">Timetable</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Share Resources.html">Share Resources</a></li>
+                <!-- <li><a href="Profile.html"><img class="userpro" src="images/usericon.png" alt=""></a></li> -->
+                <!-- <li><a href="#"><img width="12%" src="images/wall-e.png" alt=""></a></li> -->
+                <li><a href="Profile.html"><img class="userpro" src="images/usericon.png" alt=""></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h1 class="form-head">CTU-Buddy Discussion Form</h1>
+
+            <div class="discussion">
+                <hr class="hr-mod">
+
+                <!-- Email Functionality -->
+                <div class="email-section">
+                    <h2 class="email-header">Send an Email</h2>
+                    <form id="emailForm" action="sendEmail.php" method="POST">
+                        <label>Name</label>
+                        <input id="name" type="text" name="name" placeholder="Enter Name" required>
+                        <label>Email</label>
+                        <input id="email" type="text" name="email" placeholder="Enter Email" required>
+                        <label>Subject</label>
+                        <input id="subject" type="text" name="subject" placeholder="Enter Subject" required>
+                        <p>Message</p>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <h4 class="sent-notification"></h4>
+                </div>
+            </div>
+        </div>
+
+        <script src="Discussion_script.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#emailForm").submit(function (event) {
+                    event.preventDefault();
+                    sendEmail();
+                });
+            });
+
+            function sendEmail() {
+                var name = $("#name");
+                var email = $("#email");
+                var subject = $("#subject");
+                var body = $("#body");
+
+                if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                    $.ajax({
+                        url: "sendEmail.php",
+                        method: "POST",
+                        dataType: "json",
+                        data: {
+                            name: name.val(),
+                            email: email.val(),
+                            subject: subject.val(),
+                            body: body.val()
+                        },
+                        success: function (response) {
+                            $("#emailForm")[0].reset();
+                            $(".sent-notification").text(response.message);
+                        }
+                    });
+                }
+            }
+
+            function isNotEmpty(caller) {
+                if (caller.val() == "") {
+                    caller.css("border", "3px solid red");
+                    return false;
+                } else {
+                    caller.css("border", " 3px solid green");
+                    return true;
+                }
+            }
+        </script>
+        <footer>
+            <p id="custom">Copyright <img class="copyright" src="images/copyright-regular.svg" width="10" height="10"> 2023 Shadows</p>
+            </footer>
+
+    </div>
+</body>
+
+
+</html>
